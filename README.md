@@ -1,13 +1,13 @@
 # CYPHER
 Project that encrypts and decrypts some kind of cypher
 
-HOW TO RUN A PROJECT?
-1.write the text you want to Encrypt or Decrypt in InPut.txt
+HOW TO RUN THE PROJECT?
+1.Write the text you want to Encrypt or Decrypt in InPut.txt
 2.Open Terminal and write
  |~python3 main.py InPut.txt
 
 HOW DOES IT WORK?
-1. When you run project you have to choose if you encrypt given text, decrypt it or hack it.
+1. When you run the project you have to choose if you want to encrypt, decrypt or hack the given text.
 |   
 |    IF YOU WANT TO ENCRYPT ENTER 1
 |    IF YOU WANT TO DECRYPT ENTER 2

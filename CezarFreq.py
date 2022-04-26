@@ -1,11 +1,11 @@
 from Cezar import Cezar
 
+PER = 100
+deff = 0.09
 
-
-  
 
 def hack(text):
-    
+
     standFreck = []
     standFreck.append(['A', 8.89])
     standFreck.append(['B', 1.58])
@@ -36,32 +36,28 @@ def hack(text):
 
     CurrFreck = []
     for i in range(len(standFreck)):
-        CurrFreck.append([standFreck[i][0],0.0])
+        CurrFreck.append([standFreck[i][0], 0.0])
 
-    
     for i in range(len(text)):
         for j in range(len(CurrFreck)):
             if text[i] == CurrFreck[j][0]:
                 CurrFreck[j][1] += 1.0
                 break
-    
+
     for i in range(len(CurrFreck)):
-            CurrFreck[i][1] = (CurrFreck[i][1]/len(text))*100
-            
-    deff = 0.09
+            CurrFreck[i][1] = (CurrFreck[i][1]/len(text))*PER
+
     slides = []
     for i in range(len(CurrFreck)):
         for j in range(len(standFreck)):
             if (CurrFreck[i][1] >= (standFreck[j][1] - deff)) and (CurrFreck[i][1] <= (standFreck[j][1] + deff)):
                 slides.append(Cezar.Alphabeth.index(CurrFreck[i][0]) - Cezar.Alphabeth.index(standFreck[j][0]))
-    
-    
-    
+
     slides.sort()
     count = 0
     maxCount = count
     slide = 0
-    
+
     for i in range(1, len(slides)):
         if slides[i] == slides[i-1]:
             count += 1
@@ -70,17 +66,8 @@ def hack(text):
                 maxCount = count
                 slide = slides[i]
             count = 0
-            
+
     Cez = Cezar(slide)
     Cez.Decryption(text)
     return Cez.text
-    
-    
 
-
-        
-        
-        
-            
-            
-            
